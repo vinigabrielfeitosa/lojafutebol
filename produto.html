@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/577791ff15.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+
+    <div class="topmenu">
+        <a href="#">Clique aqui e confira nossos descontos</a>
+    </div>
+    <div class="menu">
+
+      <div class="logo"><a href="index.html">FutStore</a></div>
+      <nav id="nav" class="burger">
+        <button style="background-color: black; color: #fff;" aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburger"><i class="fa-solid fa-bars" style="color: #ffffff; font-size: 28px;"></i></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cep.html">Masculinas</a></li>
+          <li><a href="dolar.html">Femininas</a></li>
+          <li><a href="tempo.html">Infantil</a></li>
+          <li><a href="fake.html">Camisas Retrôs</a></li>
+          <li><a href="json.html">Corta Ventos</a></li>
+          <li id="rastrearmb"><a href="tabelaFrete.html"><i class="fa-solid fa-truck-fast" style="font-size: 24px;"></i> Rastrear Pedido</a></li>
+          <li id="loginmb"><a href=""><i class="fa-solid fa-user" style="font-size: 24px;"></i> Minha Conta</a></li>
+          <li id="carrinhomb"><a href=""><i class="fa-solid fa-cart-shopping" style="font-size: 24px;"></i> Carrinho</a></li>
+        </ul>
+      </nav>
+      <form class="pesquisa">
+        <input class="input-search" placeholder="O que deseja procurar?" type="text" autocomplete="off">
+        <button class="button-search" aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+      <div class="iconsmenu">
+        <div id="rastrear"><a href="tabelaFrete.html"><i class="fa-solid fa-truck-fast" style="font-size: 24px;"></i> Rastrear Pedido</a></div>
+        <div id="login"><a href=""><i class="fa-solid fa-user" style="font-size: 24px;"></i> Minha Conta</a></div>
+        <div id="carrinho"><a href=""><i class="fa-solid fa-cart-shopping" style="font-size: 24px;"></i> 0</a></div>
+        
+      </div>
+      
+    </div>
+    
+
+    <div class="submenu">
+      <div id="masculinas"><a href="#">Masculinas</a></div>
+      <div id="femininas"><a href="#">Femininas</a></div>
+      <div id="infantil"><a href="#">Infantil</a></div>
+      <div id="retro"><a href="#">Camisas Retrôs</a></div>
+      <div id="corta"><a href="#">Corta Ventos</a></div>
+    </div>
+</header>
+
+    <main>
+        <div id="container-produto" class="container">
+            <div class="row">
+              <div class="col-xl-6 col-12">
+                <div id="foto-produto" class="fotopdt"><img id="imgpdt" src="">
+                </div>
+                <div class="scrolling-wrapper">
+                    <div id="trocarfoto" style="height: 90px; display: flex; justify-content: space-between;">
+                      <div class="img1" style="padding: 5; height: 90px;"> 
+                          <img class="clickable" src="" height="100%" width="90px" alt="" style="cursor: pointer;" id="imagem1">
+                      </div>
+                      <div class="img2" style="padding: 5; height: 90px;">
+                          <img class="clickable" src="" height="100%" width="90px" alt="" style="cursor: pointer;" id="imagem2">
+                      </div>
+                      <div class="img3" style="padding: 5; height: 90px;">
+                          <img class="clickable" src="" height="100%" width="90px" alt="" style="cursor: pointer;" id="imagem3">
+                      </div>
+                      <div class="img4" style="padding: 5; height: 90px;">
+                          <img class="clickable" src="" height="100%" width="90px" alt="" style="cursor: pointer;" id="imagem4">
+                      </div>
+                      <div class="img5" style="padding: 5; height: 90px;">
+                          <img class="clickable" src="" height="100%" width="90px" alt="" style="cursor: pointer;" id="imagem5">
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div id="container-nome" class="col-xl-6 col-12">
+                <h2 id="nome-produto" class="nomepdt"></h2>
+                <p id="tamanho" class="tam">Escolha o tamanho: </p> <div id="botao-selecionado"></div>
+                <ul id="lista-tam" style="list-style: none;">
+                    <li style="cursor: pointer;" class="botaotam" id="p">P</li>
+                    <li style="cursor: pointer;" class="botaotam" id="m">M</li>
+                    <li style="cursor: pointer;" class="botaotam" id="g">G</li>
+                    <li style="cursor: pointer;" class="botaotam" id="gg">GG</li>
+                </ul>
+                <br>
+                <div class="personalizar">
+                  <p class="tam">Personalize a Camisa (R$ <span id="personalizacao">19,99</span>)</p>
+                  <input class="cep" type="text" name="" id="nomeCamisa" placeholder="Nome" style="margin-top: 5px;">
+                  <br>
+                  <input class="cep" type="number" name="" id="numeroCamisa" placeholder="Numero" style="margin-top: 10px;">
+                </div>
+                <div class="precopdt">
+                  <h4 class="precodol" id="precodol">U$ <span></span></h4>
+                  <h4 id="precoreal"></h4>
+                </div>
+                <button type="button" id="botaocompra" class="btn btn-dark">Comprar</button>
+                
+                <br><br>
+                <form id="inputCaixa">
+                  <input class="cep" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="" id="cep" placeholder="Digite seu cep" maxlength="8" required>
+                  <input type="button" value="Calcular" id="botao" onclick="calcularFretes()">
+                </form>
+                <br>
+                <input class="espaco" type="text" id="estado" readonly id="campo">
+                <input class="espaco" type="text" id="cidade" readonly id="campo">
+                  <table id="tabela">
+                    <tbody id="tbody">
+                    </tbody>      
+                  </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="avaliacoes">
+            <h2> Avaliações </h2>
+            <hr>
+            <h5>
+            Deixe seu comentário e sua avaliação
+            <br>
+            Faça login e comente.
+            </h5>
+          </div>
+
+          <div class="container-maisvendidos" style="margin-top: 50px;">
+            <h2> Produtos relacionados</h2>
+            
+            <div class="scrolling-wrapper">
+              <nav>
+                <div class="card" style="width: 16rem">
+                  <img src="imagens/roupas/Intermiami frente.jpg" onmouseover="this.src='./imagens/roupas/Intermiami costa.jpg'" onmouseout="this.src='./imagens/roupas/Intermiami frente.jpg'" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title" style="text-align: left; font-size: 16px; height: 45px; font-weight: 500; overflow: hidden;">Camisa Inter Miami 23/24 s/n° Torcedor Adidas Masculina</p>
+                    <span style="display: flex; align-items: center; gap: 5px; height: 40px;">
+                      <span class="risco" style="display: flex;"><strong style="font-size: 14px;">U$</strong><strong style="font-size: 14px;" class="valorDolar">36.99</strong></span>
+                      <span class="card-text"><span style="font-size: 18px; font-weight: 500;">R$</span><span style="font-size: 18px; font-weight: 500;" class="valorReal"></span></span>
+                    </span>
+                    <button class="btn btn-dark" style="width: 100%;" onclick="exibirProdutos6()">Ver Produto</button>
+                  </div>
+                </div>
+        
+        
+                <div class="card" style="width: 16rem">
+                  <img src="imagens/roupas/Liverpool frente.jpg" onmouseover="this.src='./imagens/roupas/Liverpool costa.jpg'" onmouseout="this.src='./imagens/roupas/Liverpool frente.jpg'" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title" style="text-align: left; font-size: 16px; height: 45px; font-weight: 500; overflow: hidden;">Camisa Liverpool x Lebron James 23/24 s/n° Torcedor Nike Masculina</p>
+                    <span style="display: flex; align-items: center; gap: 5px; height: 40px;">
+                      <span class="risco" style="display: flex;"><strong style="font-size: 14px;">U$</strong><strong style="font-size: 14px;" class="valorDolar">36.99</strong></span>
+                      <span class="card-text"><span style="font-size: 18px; font-weight: 500;">R$</span><span style="font-size: 18px; font-weight: 500;" class="valorReal"></span></span>
+                    </span>
+                    <button class="btn btn-dark" style="width: 100%;" onclick="exibirProdutos7()">Ver Produto</button>
+                  </div>
+                </div>
+        
+        
+                <div class="card" style="width: 16rem">
+                  <img src="imagens/roupas/Italia frente.jpg" onmouseover="this.src='./imagens/roupas/Italia costa.jpg'" onmouseout="this.src='./imagens/roupas/Italia frente.jpg'" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title" style="text-align: left; font-size: 16px; height: 45px; font-weight: 500; overflow: hidden;">Camisa Italia Away 23/24 s/n° Torcedor Adidas Masculina</p>
+                    <span style="display: flex; align-items: center; gap: 5px; height: 40px;">
+                      <span class="risco" style="display: flex;"><strong style="font-size: 14px;">U$</strong><strong style="font-size: 14px;" class="valorDolar">36.99</strong></span>
+                      <span class="card-text"><span style="font-size: 18px; font-weight: 500;">R$</span><span style="font-size: 18px; font-weight: 500;" class="valorReal"></span></span>
+                    </span>
+                    <button class="btn btn-dark" style="width: 100%;" onclick="exibirProdutos8()">Ver Produto</button>
+                  </div>
+                </div>
+        
+                
+                <div class="card" style="width: 16rem">
+                  <img src="imagens/roupas/Orlandocity frente.jpg" onmouseover="this.src='./imagens/roupas/Orlandocity costa.jpg'" onmouseout="this.src='imagens/roupas/Orlandocity frente.jpg'" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title" style="text-align: left; font-size: 16px; height: 45px; font-weight: 500; overflow: hidden;">Camisa Orlando City Away 23/24 s/n° Torcedor Adidas Masculina</p>
+                    <span style="display: flex; align-items: center; gap: 5px; height: 40px;">
+                      <span class="risco" style="display: flex;"><strong style="font-size: 14px;">U$</strong><strong style="font-size: 14px;" class="valorDolar">36.99</strong></span>
+                      <span class="card-text"><span style="font-size: 18px; font-weight: 500;">R$</span><span style="font-size: 18px; font-weight: 500;" class="valorReal"></span></span>
+                    </span>
+                    <button class="btn btn-dark" style="width: 100%;" onclick="exibirProdutos9()">Ver Produto</button>
+                  </div>
+                </div>
+        
+        
+                <div class="card" style="width: 16rem">
+                  <img src="imagens/roupas/Milan frente.jpg" onmouseover="this.src='./imagens/roupas/Milan costa.jpg'" onmouseout="this.src='./imagens/roupas/Milan frente.jpg'" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title" style="text-align: left; font-size: 16px; height: 45px; font-weight: 500;">Camisa Milan Away 23/24 s/n° Torcedor Adidas Masculina</p>
+                    <span style="display: flex; align-items: center; gap: 5px; height: 40px;">
+                      <span class="risco" style="display: flex;"><strong style="font-size: 14px;">U$</strong><strong style="font-size: 14px;" class="valorDolar">36.99</strong></span>
+                      <span class="card-text"><span style="font-size: 18px; font-weight: 500;">R$</span><span style="font-size: 18px; font-weight: 500;" class="valorReal"></span></span>
+                    </span>
+                    <button class="btn btn-dark" style="width: 100%;" onclick="exibirProdutos10()">Ver Produto</button>
+                  </div>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+      <div class="container text-center">
+        <div class="row" style="color: white; text-align: center;">
+          <div class="col-xl-4 col-12">
+            <h4>Navegação</h4>
+            <a href="index.html">Início</a><br>
+            <a href="#">Masculinas</a><br>
+            <a href="#">Femininas</a><br>
+            <a href="#">Infantil</a><br>
+            <a href="#">Camisas Retrôs</a><br>
+            <a href="#">Corta Ventos</a><br>
+            <p></p>
+          </div>
+          <div class="col-xl-4 col-12" style="color: black;">
+            <h4>Contato</h4>
+            <p>Compre por telefone <br> (11) 91111-1111</p>
+            <p>Envie um e-mail <br> email@email.com.br</p>
+            <p>Horário de atendimento <br> Segunda à Sexta - 07:00 até 19:00</p>
+          </div>
+          <div id="pagamentos" class="col-xl-4 col-12">
+            <h4>Formas de Pagamento</h4>
+            <img src="imagens/footer/visa.png" height="24px" alt="">
+            <img src="imagens/footer/mastercard.png" height="24px" alt="">
+            <img src="imagens/footer/elo.png" height="24px" alt="">
+            <img src="imagens/footer/boleto.png" height="24px" alt="">
+            <img src="imagens/footer/pix.png" height="24px" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="direitos" style="padding: 16px 0px;">Todos os direitos reservados</div>
+    </footer>
+    
+</body>
+<script src="js/script.js"></script>
+<script src="js/produto.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/577791ff15.js" crossorigin="anonymous"></script>
+
+</html>
