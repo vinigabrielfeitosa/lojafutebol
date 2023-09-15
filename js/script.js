@@ -29,7 +29,7 @@ botoesTamanho.forEach(botao => {
 });
 
 //CONVERSOR DE DOLAR PARA REAL
-fetch (`http://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
+fetch (`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
     return resposta.json()
 }).then(economia => {
 
