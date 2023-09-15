@@ -136,7 +136,7 @@ var image4 = localStorage.getItem("image4");
 document.getElementById("imagem5").src = image4
 
 // CONVERTER DOLAR EM REAL 
-fetch (`http://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
+fetch (`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(resposta => {
     return resposta.json()
 }).then(economia => {
     var dolar = economia.USDBRL.bid;
@@ -204,7 +204,7 @@ const cepValido = (cep) => {
 //Com async e await podemos trabalhar com código assíncrono em um estilo mais parecido com o bom e velho código síncrono.
 const pesquisarCep = async () => {
     const cep = document.getElementById("cep").value;
-    const url = `http://viacep.com.br/ws/${cep}/json/`;
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
     if (cepValido(cep)) {
         const dados = await fetch(url);
         // console.log("dados: " + dados);
